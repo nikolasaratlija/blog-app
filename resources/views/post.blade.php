@@ -1,4 +1,4 @@
-<x-layout>
+<x-base.layout>
 
     <main class="max-w-6xl mx-auto mt-10 lg:mt-20 space-y-6">
         <article class="max-w-4xl mx-auto lg:grid lg:grid-cols-12 gap-x-10">
@@ -36,7 +36,7 @@
                     </a>
 
                     <div class="space-x-2">
-                        <x-category-button :category="$post->category" />
+                        <x-posts.category-button :category="$post->category" />
                     </div>
                 </div>
 
@@ -51,4 +51,4 @@
         </article>
     </main>
 
-</x-layout>
+</x-base.layout>
