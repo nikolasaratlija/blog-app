@@ -13,27 +13,7 @@
     <div class="space-y-2 lg:space-y-0 lg:space-x-4 mt-4">
         <!--  Category -->
         <div class="relative flex lg:inline-flex items-center bg-gray-100 rounded-xl">
-
-            <x-dropdown.container>
-
-                <x-slot name="trigger">
-                    <button class="py-2 pl-3 pr-9 text-sm font-semibold w-32 text-left inline-flex">
-                        {{ isset($currentCategory) ? ucwords($currentCategory->name) : 'Category' }}
-
-                        <x-misc.down-arrow class="absolute pointer-events-none"/>
-                    </button>
-                </x-slot>
-
-                <x-dropdown.item href="/" :active="request()->routeIs('home')">All</x-dropdown.item>
-
-                @foreach ($categories as $category)
-                    <x-dropdown.item href="/categories/{{ $category->slug }}" :active='request()->is("categories/{$category->slug}")'>
-                        {{ ucwords($category->name) }}
-                    </x-dropdown.item>
-                @endforeach
-
-            </x-dropdown.container>
-
+            <x-category-dropdown/>
         </div>
 
         <!-- Search -->
