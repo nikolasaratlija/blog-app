@@ -7,7 +7,7 @@
     </div>
 
     {{-- dropdown links --}}
-    <div x-show="show" class="py-2 absolute bg-gray-100 mt-2 rounded-xl w-full z-50">
+    <div x-show="show" style="display: none" class="py-2 absolute bg-gray-100 mt-2 rounded-xl w-full z-50">
         {{ $slot }}
     </div>
 </div>
